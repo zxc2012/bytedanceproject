@@ -50,7 +50,7 @@ const Main=(props)=>{
   if(secondcategories.length!=0){
     getsecondCategory=secondcategories.map((data)=>(
       <li className="NavBar-list">
-        <a href="#" className="NavBar-link" index={data.category_id} onClick={catgorieshandler}>{data.category_name}</a>
+        <a href="#" index={data.category_id} onClick={catgorieshandler}>{data.category_name}</a>
       </li>
     ));
   }

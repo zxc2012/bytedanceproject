@@ -1,6 +1,6 @@
 .NavBar-container {
   background-color: #f4f5f5;
-  padding: var(--s) var(--m);
+  padding: auto 2pm;
 }
 
 .NavBar-title {
@@ -17,19 +17,30 @@
   display: flex;
   flex-wrap: wrap;
   height: auto;
+  padding:0;
+  margin:0;
 }
 .NavBar-list{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2rem;
+  height: 1rem;
   background-color: #fff;
   border-radius: 1rem;
   font-size: 1.1rem;
   color: #8a9aa9;
-  padding: 0 .83rem;
+  padding: 0.83rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #909090;
+}
+a:hover{
+  color:#1e80ff;
+  opacity: 0.8;
 }
 .NavBar-link,
 .NavBar-link:visited {
@@ -37,6 +48,12 @@
   opacity: 0.6;
   padding:0 1rem;
   text-decoration: none;
+}
+@media(max-width:600px){
+  .NavBar-list{
+    margin-right: .83rem;
+    margin-bottom: .75rem; 
+  }
 }
 
 .NavBar-link:hover {
