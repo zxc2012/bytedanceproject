@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import React,{Component} from 'react';
+import { Router } from "@reach/router";
+import Main from './pages/Main.js';
+import Post from './pages/Post.js';
+import NotFound from './pages/NotFound.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App=(props)=>{
+  return(
+    <>
+    <div className="App-logo">
+      <img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/dcec27cc6ece0eb5bb217e62e6bec104.svg"/>
     </div>
-  );
+    <div className="App-container">
+      <Router>
+        <Main path="/" />
+        <Post path="/post/" />
+        <NotFound default />
+      </Router>
+    </div>
+  </>
+  )
 }
 
 export default App;
